@@ -1,0 +1,31 @@
+[
+  {
+  "userId": "U123456",
+  "name": "Aaron Paul",
+  "creditCard": {
+    "cardNumber": "1230",
+    "expiryDate": "11/26",
+    "cvv": "***"
+  }
+},
+{
+  "userId": "U123457",
+  "name": "Skyler White",
+  "email": "skyler.white@example.com",
+  "creditCard": {
+    "cardNumber": "1231",
+    "expiryDate": "12/26",
+    "cvv": "***"
+  }
+},
+{
+  "userId": "U123458",
+  "name": "Heisenberg",
+  "email": "heisenberg.paul@example.com",
+  "creditCard": {
+    "cardNumber": "1232",
+    "expiryDate": "10/26",
+    "cvv": "***"
+  }
+}
+]

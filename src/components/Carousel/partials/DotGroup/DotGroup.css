@@ -1,0 +1,16 @@
+.dot-container {
+  display: flex;
+  align-items: center;
+
+  .dot {
+      font-size: var(--font-size-lg);
+      width: 10px;
+      margin: 0 var(--spacing-xs);
+    }
+
+    .space {
+      margin: 0 var(--spacing-md);
+      /* optional spacing between groups */
+    }
+}
+

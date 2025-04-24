@@ -1,0 +1,70 @@
+.creditCard {
+  padding: 30px;
+  border-radius: 12px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+
+  .card-header,
+  .card-footer {
+    align-self: flex-end;
+  }
+
+  .aspire-logo {
+    width: 110px;
+    height: 30px;
+  }
+
+  .visa-logo {
+    width: 88px;
+    height: 30px;
+  }
+
+  .card-body {
+    padding: 15px 0;
+
+    .userName {
+      font-size: var(--font-size-lg);
+    }
+
+    .userNumber {
+      display: flex;
+      align-items: center;
+      font-size: var(--font-size-lg);
+    }
+
+    .userDetails {
+      display: flex;
+      align-items: center;
+    }
+
+    .userDetails p:first-child {
+      padding-right: var(--spacing-md);
+    }
+
+    .userDetails p {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.unfrozen {
+  background-color: var(--secondary-color);
+}
+
+.frozen {
+  --angle: 45deg;
+  background: linear-gradient(var(--angle), oklab(90.6% 0.014 -0.046), oklab(79.1% -0.051 -0.082))
+}
+
+@media (max-width: 768px) {
+  .creditCard {
+    padding: 20px;
+
+    .aspire-logo {
+      width: 98px;
+      height: 28px;
+    }
+  }
+}

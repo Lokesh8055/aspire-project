@@ -1,0 +1,132 @@
+/* Sidebar.css */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  padding: 40px 24px 40px;
+  border-right: 1px solid var(--grey-color);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  background-color: var(--primary-color);
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    img {
+      width: 125px;
+      height: auto;
+    }
+  }
+
+  .tagline {
+    color: var(--grey-text);
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: var(--text-color);
+      border-radius: var(--border-radius);
+      transition: all 0.2s ease;
+      color: var(--white);
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &:hover,
+      &.active {
+        color: var(--secondary-color);
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        transition: fill 0.2s ease;
+      }
+
+      &.active .icon {
+        filter: brightness(0) saturate(100%) invert(67%) sepia(51%) saturate(1000%) hue-rotate(100deg) brightness(90%) contrast(90%);
+      }
+
+      span {
+        font-size: var(--font-size-md);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    padding: 8px;
+    border-right: none;
+    border-top: 1px solid var(--grey-color);
+    background-color: var(--white);
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+
+    .logo {
+      display: none;
+    }
+
+    .nav-links {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      gap: 4px;
+
+      .nav-item {
+        flex: 1;
+        flex-direction: column;
+        gap: 4px;
+        padding: 8px 4px;
+        text-align: center;
+        font-size: var(--font-size-md);
+        color: var(--text-color);
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          color: var(--black);
+        }
+
+        span {
+          font-size: var(--font-size-md);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+        }
+
+        &.active {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+.accordion {
+  border: 1px solid var(--background-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 40%;
+
+  .accordion-header {
+    width: 100%;
+    background-color: var(--background-light);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    text-align: left;
+
+    &:hover {
+      background-color: none;
+    }
+  }
+
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  .accordion-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-icon.open {
+    transform: rotate(180deg);
+  }
+
+  .accordion-content {
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &.open {
+      max-height: 1000px;
+      opacity: 1;
+      visibility: visible;
+      background-color: var(--white);
+    }
+
+    &.closed {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      background-color: transparent;
+    }
+  }
+
+  .transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .transaction-wrapper {
+    padding: 20px;
+
+    .transaction-item {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &.blue {
+        background: var(--blue-color);
+      }
+
+      &.green {
+        background: var(--green-color);
+      }
+
+      &.pink {
+        background: var(--pink-color);
+      }
+    }
+
+    .content {
+      flex: 1;
+
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+
+      .merchant {
+        color: var(--text-color);
+      }
+
+      .amount {
+        color: #222;
+        font-size: 18px;
+
+        &.positive {
+          color: var(--secondary-color);
+        }
+      }
+
+      .date {
+        font-size: 13px;
+        color: #999;
+        margin-top: 2px;
+      }
+
+      .desc {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+
+        img {
+          width: 16px;
+        }
+
+        .blue-text {
+          color: var(--blue-text);
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: var(--spacing-md) 0;
+    }
+  }
+
+  .view-transactions {
+    background-color: var(--green-background);
+    border: 1px solid var(--green-background);
+    padding: var(--spacing-md);
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--green-hover);
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .accordion {
+    width: 100%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .accordion {
+    width: 100%;
+
+    .transaction-wrapper {
+      padding: 16px;
+
+      .transaction-item {
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .content {
+        .top-row {
+          font-size: var(--font-size-md);
+        }
+
+        .amount {
+          font-size: var(--font-size-md);
+        }
+
+        .date {
+          font-size: var(--font-size-md);
+        }
+
+        .desc {
+          font-size: var(--font-size-md);
+        }
+      }
+    }
+
+    .view-transactions {
+      font-size: var(--font-size-md);
+      padding: var(--spacing-md);
+    }
+  }
+}
