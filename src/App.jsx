@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AddCardProvider } from "./context/AddCardContext";
 import { FreezeCardProvider } from "./context/FreezeCardContext";
 
@@ -19,7 +19,8 @@ function App() {
             <Sidebar />
             <main className="main">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/cards" replace />} />
+                <Route path="/home" element={<Home/>} />
                 <Route path="/cards" element={<Cards />} />
                 <Route path="/payments" element={<Payments />} />
                 <Route path="/credit" element={<Credit />} />

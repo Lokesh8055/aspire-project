@@ -18,7 +18,7 @@ export const NAVIGATION_CONST = {
 
 export const NAV_LINKS = [
   { 
-    path: "/", 
+    path: "/home", 
     label: "Home", 
     icon: HomeLogo, 
     mobileIcon: HomeMobileLogo
