@@ -23,7 +23,7 @@ Key features:
 
 ![Desktop](./screenshots/Desktop.png)
 ![Tablet](./screenshots/Tablet.png)
-![Mobile](./screenshots/Mobile.jpg)
+![Mobile](./screenshots/Mobile.png)
 
 ## My process
 I started by analyzing the design requirements and breaking down the UI components into reusable pieces. Here's my development process:
